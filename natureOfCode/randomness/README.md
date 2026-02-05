@@ -25,11 +25,5 @@ npx http-server
 - [p5.js Reference](https://p5js.org/reference/)
 
 
-
-## Target 
-
-- understand and can implement randomness, probability and perlin noise in system
-- can implement using Object Oriented paradigm
-
-- memahami dan bisa mengimplementasikan randomness, probabilitas dan perlin noise didalam system
-- bisa mengimplementasikan mengggunakan paradigma OO
+# Deskripsi program
+    Terdapat Objek walker (berupa stroke atau circle) yang berjalan dikanvas secara random kearah 8 direksi.    
