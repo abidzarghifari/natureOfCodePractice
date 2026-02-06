@@ -1,4 +1,4 @@
-# baseSetup
+# randomDistribution
 
 ## Getting Started
 
@@ -24,10 +24,12 @@ npx http-server
 - [p5.js 2.0](https://beta.p5js.org/)
 - [p5.js Reference](https://p5js.org/reference/)
 
-start project:
 
-- Press Ctrl+Shift+P (or Cmd+Shift+P on macOS)
-- Type "Create a new p5.js 2.x Project"
-- Select the command
-- Choose a parent folder for your project   
-- Follow the prompts to configure your project
+# Deskripsi program
+    Terdapat grafik yang direpresentasikan dengan himpunan persegi panjang, tinggi dari setiap persegi panjang tersebut menyesuikan distribusi nilai acak yang akan diperbarui setiap frame.
+
+
+# Objek
+    
+
+    
