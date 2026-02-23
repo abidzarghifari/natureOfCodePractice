@@ -1,4 +1,4 @@
-# randomness
+# normalDistribution
 
 ## Getting Started
 
@@ -23,11 +23,3 @@ npx http-server
 
 - [p5.js 2.0](https://beta.p5js.org/)
 - [p5.js Reference](https://p5js.org/reference/)
-
-
-# Deskripsi program
-    Terdapat Objek walker (berupa stroke atau circle) yang berjalan dikanvas secara random kearah 8 direksi.    
-
-
-# Kesimpulan
-    Random number biasanya hanya mengandalkan fungsi built in dari setiap bahasa
