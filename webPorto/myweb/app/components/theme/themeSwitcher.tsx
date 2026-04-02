@@ -27,9 +27,9 @@ export default function ThemeSwitcher({size = 30}) {
         <>
             <button onClick={toggleTheme}>
                 {theme === 'light' ? (
-                    <CiDark size={size}/>
-                ) : (
                     <CiLight size={size}/>
+                ) : (
+                    <CiDark size={size}/>
                 )}
             </button>
         </>
