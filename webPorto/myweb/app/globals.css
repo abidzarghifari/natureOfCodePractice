@@ -96,6 +96,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 body {
   background: var(--background);

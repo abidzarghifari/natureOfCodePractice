@@ -10,7 +10,7 @@ export default function ThemeSwitcher({size = 30}) {
     const [mounted, setMounted] = useState(false)
     const { theme, setTheme } = useTheme()
 
-
+    
     useEffect(() => {
         setMounted(true)
     }, [])

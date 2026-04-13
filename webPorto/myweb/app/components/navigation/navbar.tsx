@@ -56,6 +56,7 @@ export default function Navbar(){
                         </div>
                     </div>  
                 </div>
+                
                 <div className="">
                     <Navlist isOpenMenu={isOpenMenu}></Navlist>
                 </div>

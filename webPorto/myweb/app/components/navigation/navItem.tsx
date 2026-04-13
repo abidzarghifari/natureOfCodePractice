@@ -6,7 +6,6 @@ export default function Navitem({
   children: React.ReactNode;
 }>){
     
-
     return (
         <>
             <div className="group h-7 leading-7 overflow-hidden">

@@ -9,8 +9,8 @@ export default function Navlist({isOpenMenu=false}){
 
         
         const navLinks = [
-            { name: 'Work', href: '/' },
-            { name: 'About', href: '/cobs' },
+            { name: 'Work', href: '/work' },
+            { name: 'About', href: '/about' },
             { name: 'Contact', href: '' },
         ];
         

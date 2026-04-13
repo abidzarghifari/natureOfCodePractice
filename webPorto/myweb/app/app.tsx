@@ -10,6 +10,7 @@ export default function App({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,     // Mengatur durasi scroll (semakin besar semakin lambat)
@@ -35,14 +36,14 @@ export default function App({
                     <Navbar></Navbar>
                 </div>
                         
-                <div className="">
+                <div>
                     {children}
                 </div>
                         
             </div>
-                    
+
         </div>
-                    
+        
         <Footbar></Footbar>
     </div>
   )

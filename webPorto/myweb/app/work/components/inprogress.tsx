@@ -1,9 +1,6 @@
-
-export default function Page(){
-
+export default function Inprogress (){
     return (
         <>
-
         </>
     );
-}   
+};

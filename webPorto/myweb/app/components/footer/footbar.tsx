@@ -2,9 +2,11 @@ import Navitem from "../navigation/navItem";
 export default function Footbar(){
 
     return (
-        <div>
-            
-            <div className="box-border sticky bg-foreground inset-x-0 bottom-0 px-5 md:px-15">
+        <div className="">
+            <div className="h-150 pointer-events-none">
+
+            </div>
+            <div className="box-border fixed -z-10 pointer-events-auto bg-foreground inset-x-0 bottom-0 px-5 md:px-15">
 
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 pt-10 md:pt-20 md:gap-20">
@@ -18,8 +20,8 @@ export default function Footbar(){
                     <div className="grid grid-cols-2">
         
                         <div className="flex flex-col gap-5 mt-4 md:mt-0 text-lg lg:text-xl text-background">
-                             <Navitem href="/">Work</Navitem>
-                             <Navitem href="/cobs">About</Navitem>
+                             <Navitem href="/work">Work</Navitem>
+                             <Navitem href="/about">About</Navitem>
                              <Navitem href="/">Contact</Navitem>   
                         </div>
 
