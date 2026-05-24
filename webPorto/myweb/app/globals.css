@@ -34,6 +34,17 @@
   --sidebar-accent-foreground: oklch(0.216 0.006 56.043);
   --sidebar-border: oklch(0.923 0.003 48.717);
   --sidebar-ring: oklch(0.709 0.01 56.259);
+
+  /* Formula: clamp(min, preferred, max) */
+  --fs-xs: clamp(0.38rem, 0.05vw + 0.35rem, 0.4rem);   /* base / 1.618 / 1.618 */
+  --fs-sm: clamp(0.62rem, 0.1vw + 0.6rem, 0.65rem);    /* base / 1.618 */
+  --fs-base: clamp(1rem, 0.34vw + 0.91rem, 1.13rem);   /* Titik acuan (tetap) */
+  --fs-lg: clamp(1.62rem, 1.2vw + 1.3rem, 1.83rem);    /* base * 1.618 */
+  --fs-xl: clamp(2.62rem, 2.5vw + 2rem, 3.25rem);      /* lg * 1.618 */
+  --fs-2xl: clamp(4.24rem, 5vw + 3rem, 5.26rem);
+  --fs-3xl: clamp(6.86rem, 8vw + 4rem, 8.51rem);
+  --fs-4xl: clamp(11.10rem, 12vw + 6rem, 13.77rem);
+  --fs-5xl: clamp(17.96rem, 18vw + 10rem, 22.28rem);
 }
 
 [data-theme='dark'] {
@@ -92,8 +103,20 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --radius-md: var(--radius);
+
+  --text-xs: var(--fs-xs);
+  --text-sm: var(--fs-sm);
+  --text-base: var(--fs-base);
+  --text-lg: var(--fs-lg);
+  --text-xl: var(--fs-xl);
+  --text-2xl: var(--fs-2xl);
+  --text-3xl: var(--fs-3xl);
+  --text-4xl: var(--fs-4xl);
+  --text-5xl: var(--fs-5xl);
+  
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
 }
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));

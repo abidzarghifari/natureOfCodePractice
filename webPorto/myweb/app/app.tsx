@@ -26,6 +26,7 @@ export default function App({
     requestAnimationFrame(raf)
   }, [])
 
+  
   return (
     <div>
         <div className="p-5 md:px-20 md:py-10 bg-background">
@@ -41,7 +42,7 @@ export default function App({
                 </div>
                         
             </div>
-
+            
         </div>
         
         <Footbar></Footbar>

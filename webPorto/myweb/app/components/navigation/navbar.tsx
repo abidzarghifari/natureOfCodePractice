@@ -40,18 +40,15 @@ export default function Navbar(){
     return (
         <div>
                       
-                <div className={`fixed h-15 top-5 w-full px-5 md:px-20 top-0 left-1/2 -translate-x-1/2 z-40 transition-transform duration-700 flex justify-center align-middle 
+                <div className={`fixed h-15 top-5 w-full px-5 md:px-20 left-1/2 -translate-x-1/2 z-40 transition-transform duration-700 flex justify-center align-middle 
                     ${isVisible ? 
                     "translate-y-0" : 
                     "-translate-y-[220%]"}`}
                     >
                     <div className="flex w-full max-w-8xl justify-between items-center">
-                        <h1 className="text-3xl font-serif font-medium ">dikayoda</h1> 
-                        
-                        <div className="hidden md:flex justify-center align-middle">
-                            <ThemeSwitcher></ThemeSwitcher>
-                        </div>
-                        <div className="flex md:hidden justify-center align-middle">
+                        <h1 className="text-lg font-serif font-medium ">Dikayoda</h1> 
+
+                        <div className="flex justify-center align-middle">
                             <Hamburger size={25} direction="right" toggled={isOpenMenu} toggle={setOpenMenu}></Hamburger>
                         </div>
                     </div>  
