@@ -36,7 +36,7 @@ export default function RootLayout({
         <body className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden antialiased`}>
           <ThemeProvider>
             <App>
-              {process.env.NODE_ENV === 'development' && <OverflowDetector />}
+              {/*process.env.NODE_ENV === 'development' && <OverflowDetector />*/}
               {children}
             </App>
           </ThemeProvider>

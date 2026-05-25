@@ -17,9 +17,9 @@ export default function Page(){
                 
                 <div className="pt-10 flex flex-col lg:flex-row gap-6 lg:gap-5">
                     <div className="flex-1 text-base">
-                        My Story
+                        my story
                     </div>
-                    <div className="flex-1 lg:flex-3 text-lg">
+                    <div className="flex-1 lg:flex-3 text-base">
                         Explore my journey and learn what sets us apart in <span className="text-muted-foreground">crafting impactful digital experiences.</span>
                     </div>
                     <div className="flex-1 flex items-start lg:justify-end">

@@ -1,4 +1,5 @@
 import PhotoProfile from "./components/photoProfile";
+import BorderLine from "../components/line/borderline";
 
 export default function Page(){
 
@@ -8,37 +9,35 @@ export default function Page(){
 
                 {//title==============
                 }
-
-                <div className="grid grid-cols-1 md:grid-cols-2">
-                    <div className="">
+                <div className="grid grid-cols-1 md:grid-cols-2 py-5">
+                    <div className="hidden md:flex">
                         <p className="">About.</p>   
                     </div>
-                    <div>
-                        <h3 className="text-lg">I`m Dikayoda. Progamming Enthusiast.</h3>
-                        <p  className="text-base text-muted-foreground text-justify">Passionate about translating technical excellence into immersive digital experience. Crafting the art of engineering on a digital canvas always be my goal.</p>
+                    
+                    
+                    <div className="grid grid-cols-1 gap-10">
+                        <div className="rounded-full overflow-hidden aspect-square h-40">
+                            <PhotoProfile imgSrc="/ProfilePicture.webp"></PhotoProfile>
+                        </div>
+                        <div>
+                            <h3 className="text-lg">I`m Dikayoda. Progamming Enthusiast.</h3>
+                            <p  className="text-base text-muted-foreground text-justify">Passionate about translating technical excellence into immersive digital experience. Crafting the art of engineering on a digital canvas always be my goal.</p>
+                        </div>
                     </div>
                 </div>
 
-
                 {//About
                 }
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                    <div>
-                        <PhotoProfile imgSrc="/ProfilePicture.webp"></PhotoProfile>
-                    </div>
-                    <div className="md:col-span-2 grid grid-col-1 gap-3">
-                            <div className="bg-muted"></div>
-                            <div className="bg-muted"></div>
-                            <div className="bg-muted"></div>
-                    </div>
+                <div className="grid grid-cols-1 ">
+                    <BorderLine></BorderLine>
                 </div>            
 
 
                 {//persuasif naration
                 }
                 <div className="grid grid-cols-1 gap-5 justify-items-center">
-                    <p className="text-lg text-justify max-w-3xl">For me, code isn't just instructions, it's also a space for experimentation, a play space that always triggers dopamine.</p>
-                    <p className="text-base text-muted-foreground text-justify max-w-3xl">However, the best projects are never born in a vacuum. Technology advances too rapidly to be explored in isolation. There are always boundaries that can be broken when two—or more—heads come together, share wild ideas, and combine diverse skills. So I invite you to collaborate and let you know how I build this art.</p>
+                    <p className="text-lg text-justify max-w-2xl">For me, code isn't just instructions, it's also a space for experimentation, a play space that always triggers dopamine.</p>
+                    <p className="text-base text-muted-foreground text-justify max-w-2xl">However, the best projects are never born in a vacuum. Technology advances too rapidly to be explored in isolation. There are always boundaries that can be broken when two—or more—heads come together, share wild ideas, and combine diverse skills. So I invite you to collaborate and let you know how I build this art.</p>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center bg-muted p-15 rounded-md">
@@ -65,7 +64,7 @@ export default function Page(){
                 </div>
 
                 <div className="grid grid-cols-1 gap-5 justify-items-center">
-                    <p className="text-base text-muted-foreground text-justify max-w-3xl">However, the best projects are never born in a vacuum. Technology advances too rapidly to be explored in isolation. There are always boundaries that can be broken when two—or more—heads come together, share wild ideas, and combine diverse skills. So I invite you to collaborate and let you know how I build this art.</p>
+                    <p className="text-base text-muted-foreground text-justify max-w-2xl">However, the best projects are never born in a vacuum. Technology advances too rapidly to be explored in isolation. There are always boundaries that can be broken when two—or more—heads come together, share wild ideas, and combine diverse skills. So I invite you to collaborate and let you know how I build this art.</p>
                 </div>
 
                 {//showcase
