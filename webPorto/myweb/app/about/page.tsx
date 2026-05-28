@@ -1,11 +1,12 @@
 import PhotoProfile from "./components/photoProfile";
 import BorderLine from "../components/line/borderline";
+import ShowCase from "./components/showCase";
 
 export default function Page(){
 
     return (
         <>
-            <div className="py-15 md:py-20 pb-30 flex flex-col gap-10 md:gap-20">
+            <div className="py-15 md:py-20 md:pb-30 flex flex-col gap-20 md:gap-20">
 
                 {//title==============
                 }
@@ -36,7 +37,7 @@ export default function Page(){
                 {//persuasif naration
                 }
                 <div className="grid grid-cols-1 gap-5 justify-items-center">
-                    <p className="text-lg text-justify max-w-2xl">For me, code isn't just instructions, it's also a space for experimentation, a play space that always triggers dopamine.</p>
+                    <p className="text-base md:text-lg text-justify max-w-2xl">For me, code isn't just instructions, it's also a space for experimentation, a playground that always triggers dopamine.</p>
                     <p className="text-base text-muted-foreground text-justify max-w-2xl">However, the best projects are never born in a vacuum. Technology advances too rapidly to be explored in isolation. There are always boundaries that can be broken when two—or more—heads come together, share wild ideas, and combine diverse skills. So I invite you to collaborate and let you know how I build this art.</p>
                 </div>
                 
@@ -69,22 +70,10 @@ export default function Page(){
 
                 {//showcase
                 }
-                <div className="grid grid-cols-1 md:grid-cols-5 gap-5 md:h-[80dvh] md:max-h-[250px] lg:max-h-[500px]">
-                    <div className="bg-muted md:col-span-3 overflow-hidden rounded-sm">
-                        <PhotoProfile imgSrc="https://picsum.photos/id/275/300/300" ></PhotoProfile>
-                    </div>
-                    <div className="bg-muted md:col-span-2 overflow-hidden rounded-sm">
-                        <PhotoProfile imgSrc="https://picsum.photos/id/456/300/300" className="md:aspect-20/30"></PhotoProfile>
-                    </div>                   
-                </div>
+                <ShowCase></ShowCase>
 
             </div>
 
         </>
     );
 }   
-
-/**
- * 
-                     
- */

@@ -7,11 +7,10 @@ import ThemeSwitcher from "../theme/themeSwitcher";
 
 export default function Navlist({isOpenMenu=false}){
 
-        
         const navLinks = [
             { name: 'Work', href: '/work' },
             { name: 'About', href: '/about' },
-            { name: 'Contact', href: '' },
+            { name: 'AskMe', href: '' },
         ];
         
         const [isVisible, setIsVisible] = useState(false);

@@ -37,7 +37,7 @@ export default function App({
                     <Navbar></Navbar>
                 </div>
                         
-                <div>
+                <div className=''>
                     {children}
                 </div>
                         

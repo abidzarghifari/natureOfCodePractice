@@ -6,7 +6,8 @@ export default function Page(){
 
     return (
         <>
-            <div className="py-15 md:py-20 pb-30 flex flex-col gap-10 md:gap-20">
+            <div className="py-15 md:py-20 md:pb-30 flex flex-col gap-20">
+
                 <div className="text-center overflow-hidden">
                     <h3 className="text-2xl md:text-3xl lg:text-4xl tracking-widest">WORK.</h3>
                 </div>

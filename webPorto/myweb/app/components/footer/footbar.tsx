@@ -13,7 +13,7 @@ export default function Footbar(){
                     
                     <div className="hidden md:flex flex-col">
                         <p className="text-muted-foreground text-sm">2026 developed with passion by Dikayoda</p>
-                        <h1 className="text-2xl font-serif py-5">Dikayoda</h1>
+                        <h1 className="md:text-xl lg:text-2xl font-serif py-5">Dikayoda</h1>
                     </div>
                     
                     
@@ -22,7 +22,7 @@ export default function Footbar(){
                         <div className="flex flex-col gap-5 mt-4 md:mt-0 text-base">
                              <Navitem href="/work">Work</Navitem>
                              <Navitem href="/about">About</Navitem>
-                             <Navitem href="/">Contact</Navitem>   
+                             <Navitem href="/">AskMe</Navitem>   
                         </div>
 
                         <div className="flex flex-col gap-5 space-x-6 mt-4 md:mt-0">
