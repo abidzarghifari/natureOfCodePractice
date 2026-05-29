@@ -21,7 +21,7 @@ export default function Page(){
                             <PhotoProfile imgSrc="/ProfilePicture.webp"></PhotoProfile>
                         </div>
                         <div>
-                            <h3 className="text-lg">I`m Dikayoda. Progamming Enthusiast.</h3>
+                            <h3 className="text-lg font-serif">I`m Dikayoda. Progamming Enthusiast.</h3>
                             <p  className="text-base text-muted-foreground text-justify">Passionate about translating technical excellence into immersive digital experience. Crafting the art of engineering on a digital canvas always be my goal.</p>
                         </div>
                     </div>

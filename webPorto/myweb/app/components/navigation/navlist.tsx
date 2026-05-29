@@ -4,13 +4,15 @@ import Navitem from "./navItem"
 import { useState } from "react";
 import { useEffect } from "react";
 import ThemeSwitcher from "../theme/themeSwitcher";
+import NavitemButton from "./navitembutton";
+import AskMe from "../askMe/askMe";
 
 export default function Navlist({isOpenMenu=false}){
 
         const navLinks = [
             { name: 'Work', href: '/work' },
             { name: 'About', href: '/about' },
-            { name: 'AskMe', href: '' },
+            
         ];
         
         const [isVisible, setIsVisible] = useState(false);
@@ -45,7 +47,9 @@ export default function Navlist({isOpenMenu=false}){
             };
         }, [lastScrollY]);
     
-    
+        
+        const [isOpenDialog, setIsOpenDialog] = useState(false);
+
     return (
         <>
             <div className="fixed left-1/2 -translate-x-1/2 z-50">
@@ -67,6 +71,11 @@ export default function Navlist({isOpenMenu=false}){
                                     </Navitem>
                                 </ul>                    
                             ))}
+                            <ul>
+                                <NavitemButton toggle={ () =>setIsOpenDialog(true)}>
+                                   AskMe 
+                                </NavitemButton>
+                            </ul>
                         </li>
                     </div>
                 </div>
@@ -87,11 +96,20 @@ export default function Navlist({isOpenMenu=false}){
                             </ul>                    
                         ))}
                         <ul>
+                                <NavitemButton toggle={() => setIsOpenDialog(true) }>
+                                   AskMe 
+                                </NavitemButton>
+                        </ul>
+                        <ul>
                             <ThemeSwitcher></ThemeSwitcher>
                         </ul>
                     </li>
                 </div>    
                 
+            </div>
+            
+            <div>
+                <AskMe toggled={isOpenDialog} toggle={() =>setIsOpenDialog(false)}></AskMe>
             </div>
             
         </>

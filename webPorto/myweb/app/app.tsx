@@ -44,7 +44,6 @@ export default function App({
             </div>
             
         </div>
-        
         <Footbar></Footbar>
     </div>
   )
