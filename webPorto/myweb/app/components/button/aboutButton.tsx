@@ -1,11 +1,12 @@
 import { GoArrowRight } from "react-icons/go";
+import Link from "next/link";
 
 export default function AboutButton (){
     return (
         <>
-                    <button className="group flex flex-row items-center gap-1 bg-foreground text-background text-base p-2 px-4 rounded-full">
-                        About Us<GoArrowRight className="transition-all duration-300 -rotate-45 group-hover:rotate-0" size={20}/>
-                    </button>
+                    <Link href="/about" className="group flex flex-row items-center gap-1 bg-foreground text-background text-base p-2 px-4 rounded-full">
+                        About Me<GoArrowRight className="transition-all duration-300 -rotate-45 group-hover:rotate-0" size={20}/>
+                    </Link>
         </>
     );
 };

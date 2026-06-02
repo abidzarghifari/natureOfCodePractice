@@ -32,10 +32,10 @@ export default function ShowCase (){
 	return (
 		<>
 			<div className="grid grid-cols-1 md:grid-cols-5 gap-5 md:h-[80dvh] md:max-h-[250px] lg:max-h-[500px]">
-				<div className="bg-muted md:col-span-3 overflow-hidden rounded-sm">
+				<div className="bg-muted md:col-span-3 overflow-hidden rounded-sm shadow-lg">
 					<PhotoProfile imgSrc={photoUrlArr[photoUrl0]}></PhotoProfile>
 				</div>
-				<div className="bg-muted md:col-span-2 overflow-hidden rounded-sm">
+				<div className="bg-muted md:col-span-2 overflow-hidden rounded-sm shadow-lg">
 					<PhotoProfile imgSrc={photoUrlArr[photoUrl1]} className="md:aspect-20/30"></PhotoProfile>
 				</div>
             </div>

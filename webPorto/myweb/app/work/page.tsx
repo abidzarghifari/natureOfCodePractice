@@ -1,6 +1,6 @@
 import Done from "./components/done";
 import AboutButton from "../components/button/aboutButton";
-
+import SlideDownAnimation from "../components/tools/slideDownAnimation";
 
 export default function Page(){
 
@@ -9,7 +9,9 @@ export default function Page(){
             <div className="py-15 md:py-20 md:pb-30 flex flex-col gap-20">
 
                 <div className="text-center overflow-hidden">
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl tracking-widest">WORK.</h3>
+                    <SlideDownAnimation duration={200}>
+                        <h3 className="text-2xl md:text-3xl lg:text-4xl tracking-widest">WORK.</h3>
+                    </SlideDownAnimation>
                 </div>
 
                 <div>

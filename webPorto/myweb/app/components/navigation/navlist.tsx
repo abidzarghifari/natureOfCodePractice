@@ -72,7 +72,7 @@ export default function Navlist({isOpenMenu=false}){
                                 </ul>                    
                             ))}
                             <ul>
-                                <NavitemButton toggle={ () =>setIsOpenDialog(true)}>
+                                <NavitemButton toggle={ () =>setIsOpenDialog((prev)=>!prev)}>
                                    AskMe 
                                 </NavitemButton>
                             </ul>
@@ -96,7 +96,7 @@ export default function Navlist({isOpenMenu=false}){
                             </ul>                    
                         ))}
                         <ul>
-                                <NavitemButton toggle={() => setIsOpenDialog(true) }>
+                                <NavitemButton toggle={() => setIsOpenDialog((prev)=>!prev) }>
                                    AskMe 
                                 </NavitemButton>
                         </ul>

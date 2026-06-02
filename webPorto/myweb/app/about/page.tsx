@@ -1,6 +1,7 @@
 import PhotoProfile from "./components/photoProfile";
 import BorderLine from "../components/line/borderline";
 import ShowCase from "./components/showCase";
+import SlideDownAnimation from "../components/tools/slideDownAnimation";
 
 export default function Page(){
 
@@ -12,17 +13,26 @@ export default function Page(){
                 }
                 <div className="grid grid-cols-1 md:grid-cols-2 py-5">
                     <div className="hidden md:flex">
-                        <p className="">About.</p>   
+                        <SlideDownAnimation duration={200}>
+                            <p className="">About.</p>
+                        </SlideDownAnimation>
                     </div>
                     
                     
                     <div className="grid grid-cols-1 gap-10">
-                        <div className="rounded-full overflow-hidden aspect-square h-40">
-                            <PhotoProfile imgSrc="/ProfilePicture.webp"></PhotoProfile>
-                        </div>
+                        <SlideDownAnimation duration={200}>
+                            <div className="rounded-full overflow-hidden aspect-square h-40 shadow-lg">
+                                <PhotoProfile imgSrc="/ProfilePicture.webp"></PhotoProfile>
+                            </div>
+                        </SlideDownAnimation>
+                        
                         <div>
-                            <h3 className="text-lg font-serif">I`m Dikayoda. Progamming Enthusiast.</h3>
-                            <p  className="text-base text-muted-foreground text-justify">Passionate about translating technical excellence into immersive digital experience. Crafting the art of engineering on a digital canvas always be my goal.</p>
+                            <SlideDownAnimation duration={300}>
+                                <h3 className="text-lg font-serif">I`m Dikayoda. Progamming Enthusiast.</h3>
+                            </SlideDownAnimation>
+                            <SlideDownAnimation duration={500}>
+                                <p  className="text-base text-muted-foreground text-justify">Passionate about translating technical excellence into immersive digital experience. Crafting the art of engineering on a digital canvas always be my goal.</p>
+                            </SlideDownAnimation>
                         </div>
                     </div>
                 </div>
@@ -30,39 +40,46 @@ export default function Page(){
                 {//About
                 }
                 <div className="grid grid-cols-1 ">
-                    <BorderLine></BorderLine>
+                    <SlideDownAnimation duration={200}>
+                        <BorderLine></BorderLine>
+                    </SlideDownAnimation>
                 </div>            
 
 
                 {//persuasif naration
                 }
-                <div className="grid grid-cols-1 gap-5 justify-items-center">
-                    <p className="text-base md:text-lg text-justify max-w-2xl">For me, code isn't just instructions, it's also a space for experimentation, a playground that always triggers dopamine.</p>
-                    <p className="text-base text-muted-foreground text-justify max-w-2xl">However, the best projects are never born in a vacuum. Technology advances too rapidly to be explored in isolation. There are always boundaries that can be broken when two—or more—heads come together, share wild ideas, and combine diverse skills. So I invite you to collaborate and let you know how I build this art.</p>
-                </div>
+                <SlideDownAnimation duration={500}>
+                    <div className="grid grid-cols-1 gap-5 justify-items-center">
+                        <p className="text-base md:text-lg max-w-2xl text-justify">For me, code isn't just instructions, it's also a space for experimentation, a playground that always triggers dopamine.</p>
+                        <p className="text-base text-muted-foreground text-justify max-w-2xl">However, the best projects are never born in a vacuum. Technology advances too rapidly to be explored in isolation. There are always boundaries that can be broken when two—or more—heads come together, share wild ideas, and combine diverse skills. So I invite you to collaborate and let you know how I build this art.</p>
+                    </div>
+                </SlideDownAnimation>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center bg-muted p-15 rounded-md">
-                    <div>
-                        <h4 className="text-lg text-muted-foreground">01</h4>
-                        <h4 className="text-lg text-muted-foreground">amet</h4>
-                        <p className="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam nobis, quam consequuntur quaerat est provident deleniti corrupti qui nesciunt rem ratione autem quae illo debitis quisquam repudiandae optio voluptatem? Sunt.</p>
+                <SlideDownAnimation duration={500}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center bg-muted p-15 rounded-md">
+                        <div>
+                            <h4 className="text-lg text-muted-foreground">01</h4>
+                            <h4 className="text-lg text-muted-foreground">Imagine</h4>
+                            <p className="text-justify">I do not just think-I imagine. Knowledge gives us the tools, but imagination gives us the direction. if you can envision it, just a gentle spark of momentum you can make it. After all, as Einstein put it: "Imagination is more important than knowledge."</p>
+                        </div>
+                        <div>
+                            <h4 className="text-lg text-muted-foreground">02</h4>
+                            <h4 className="text-lg text-muted-foreground">Designing</h4>
+                            <p className="text-justify">To build without design is to journey without a map. For me, design is the soul of creation. It is the quiet force that clarifies the chaos, defines the vision, and ensures that every single brick we lay has a purpose.</p>
+                        </div>
+                        <div>
+                            <h4 className="text-lg text-muted-foreground">03</h4>
+                            <h4 className="text-lg text-muted-foreground">Define Tools</h4>
+                            <p className="text-justify">The right tools don’t just build the vision; they protect it. Choosing our technical toolkit early isn’t about checking boxes—it’s about setting the rules of engagement. When the tools are intentional, the execution is effortless, ensuring that what we build today is strong enough to stand tomorrow.</p>
+                        </div>
+                        <div>
+                            <h4 className="text-lg text-muted-foreground">04</h4>
+                            <h4 className="text-lg text-muted-foreground">Keep Playing</h4>
+                            <p className="text-justify">Rules build structures, but play builds wonders. We stay curious, we test boundaries, and we treat every canvas like a playground. Because the moment you stop playing is the moment you stop innovating.</p>
+                        </div>
                     </div>
-                    <div>
-                        <h4 className="text-lg text-muted-foreground">02</h4>
-                        <h4 className="text-lg text-muted-foreground">ipsum</h4>
-                        <p className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus iusto ea vitae fugiat architecto velit maiores earum perspiciatis aliquam aspernatur veniam dolorem eveniet voluptate beatae, explicabo voluptatibus ducimus eaque exercitationem?</p>
-                    </div>
-                    <div>
-                        <h4 className="text-lg text-muted-foreground">03</h4>
-                        <h4 className="text-lg text-muted-foreground">labore</h4>
-                        <p className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores labore dolor dolorum saepe earum tempora ullam omnis illum magnam, sapiente ipsa officiis ea totam doloremque vel et obcaecati hic exercitationem.</p>
-                    </div>
-                    <div>
-                        <h4 className="text-lg text-muted-foreground">04</h4>
-                        <h4 className="text-lg text-muted-foreground">dolor</h4>
-                        <p className="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ratione provident perspiciatis, voluptas aspernatur quos non cumque est explicabo quam debitis consequuntur accusantium officia vitae laudantium! Unde sequi a harum.</p>
-                    </div>
-                </div>
+                </SlideDownAnimation>
+                
 
                 <div className="grid grid-cols-1 gap-5 justify-items-center">
                     <p className="text-base text-muted-foreground text-justify max-w-2xl">However, the best projects are never born in a vacuum. Technology advances too rapidly to be explored in isolation. There are always boundaries that can be broken when two—or more—heads come together, share wild ideas, and combine diverse skills. So I invite you to collaborate and let you know how I build this art.</p>
