@@ -8,8 +8,9 @@ import ChatType from "./component/chatType";
 const chatQueue: ChatType[] = [
     { type: 'question-chat', text: 'Tell me your background??' },
     { type: 'question-time'},
-	{ type: 'first-chat', text: "I'm just an ordinary person who was born in a small town in Central Java, specifically in Temanggung." },
-	{ type: 'bubble', text: "I went to school in Wonosobo and a student at the University of Al-Qur'an Science." },
+	{ type: 'first-chat', text: "I was born in a small town in Central Java, specifically in Temanggung." },
+	{ type: 'bubble', text: "I went to school in Wonosobo and a student at the University of Science Al-Qur'an." },
+	{ type: 'bubble', text: "Is there anything else I can help you with?" },
 	{ type: 'answer-time'},
 ];
 

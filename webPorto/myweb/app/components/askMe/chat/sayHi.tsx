@@ -6,14 +6,16 @@ import ChatBubble from "./component/chatBubble";
 import ChatType from "./component/chatType";
 
 const chatQueue: ChatType[] = [
-    { type: 'question-chat', text: 'Can we make collaboration?' },
+    { type: 'question-chat', text: 'Just say Hi' },
     { type: 'question-time'},
-	{ type: 'first-chat', text: "thats great broww" },
-	{ type: 'bubble', text: "Send me a message and lets chat further!" },
+	{ type: 'first-chat', text: "oww hello there" },
+	{ type: 'bubble', text: "Thanks for saying hi😁" },
+	{ type: 'bubble', text: "Hope you enjoy my site" },
+	{ type: 'bubble', text: "Is there anything else I can help you with?" },
 	{ type: 'answer-time'},
 ];
 
-export default function AskCollaboration(){
+export default function SayHi(){
 	
 	
 	const visibleMessages = useSequentialRender(chatQueue,800);

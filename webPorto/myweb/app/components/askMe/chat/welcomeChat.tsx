@@ -9,6 +9,7 @@ import AskCollaboration from "./askCollaboration";
 import { useSequentialRender } from "../../tools/sequentialRender";
 import TimeStamp from "./component/timeStamp";
 import AskBackground from "./askBackground";
+import SayHi from "./sayHi";
 
 const chatQueue: ChatType[] = [
     { type: 'first-chat', text: 'Hi!' },
@@ -23,9 +24,12 @@ export default function WelcomeChat(){
 	const [isOpenButton, setIsOpenButton] = useState(true);
 	const [isOpenBackground, setIsOpenBackground] = useState(false);
 	const [isOpenCollaboration, setIsOpenCollaboration] = useState(false);
+	const [isOpenSayHi, setIsOpenSayHi] = useState(false);
+
 	const askBackground = () => {setIsOpenBackground(true); setIsOpenButton(false)}; 	
 	const askCollaboration = () => {setIsOpenCollaboration(true); setIsOpenButton(false)}; 
-	
+	const askSayHi = () => {setIsOpenSayHi(true); setIsOpenButton(false)};
+
 	const visibleMessages = useSequentialRender(chatQueue,700);
 
 	return (
@@ -51,6 +55,7 @@ export default function WelcomeChat(){
 						<div key={index} className="flex flex-col gap-2 animate-in fade-in duration-300">
 							<ChatButton onClick={askBackground}>Tell me your background?</ChatButton>
 							<ChatButton onClick={askCollaboration}>Can we make collaboration?</ChatButton>
+							<ChatButton onClick={askSayHi}>Just say Hi</ChatButton>
 						</div>
 					) : null;
 					}
@@ -71,6 +76,13 @@ export default function WelcomeChat(){
 				isOpenCollaboration && (
 					<>
 						<AskCollaboration></AskCollaboration>
+					</>
+				)
+			}
+			{
+				isOpenSayHi && (
+					<>
+						<SayHi></SayHi>
 					</>
 				)
 			}
