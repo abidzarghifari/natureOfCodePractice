@@ -3,12 +3,12 @@
 import { useState } from "react";
 import ChatType from "./component/chatType";
 import FirstChat from "./component/firstChatBubble";
-import AddressChat from "./askAddress";
 import ChatBubble from "./component/chatBubble";
 import ChatButton from "./component/chatButton";
 import AskCollaboration from "./askCollaboration";
 import { useSequentialRender } from "../../tools/sequentialRender";
 import TimeStamp from "./component/timeStamp";
+import AskBackground from "./askBackground";
 
 const chatQueue: ChatType[] = [
     { type: 'first-chat', text: 'Hi!' },
@@ -21,9 +21,9 @@ const chatQueue: ChatType[] = [
 export default function WelcomeChat(){
 	
 	const [isOpenButton, setIsOpenButton] = useState(true);
-	const [isOpenAddress, setIsOpenAddress] = useState(false);
+	const [isOpenBackground, setIsOpenBackground] = useState(false);
 	const [isOpenCollaboration, setIsOpenCollaboration] = useState(false);
-	const askAddress = () => {setIsOpenAddress(true); setIsOpenButton(false)}; 	
+	const askBackground = () => {setIsOpenBackground(true); setIsOpenButton(false)}; 	
 	const askCollaboration = () => {setIsOpenCollaboration(true); setIsOpenButton(false)}; 
 	
 	const visibleMessages = useSequentialRender(chatQueue,700);
@@ -49,7 +49,7 @@ export default function WelcomeChat(){
 					// Fungsi state dipanggil dengan aman di sini saat mapping UI
 					return isOpenButton ? (
 						<div key={index} className="flex flex-col gap-2 animate-in fade-in duration-300">
-							<ChatButton onClick={askAddress}>Where are you from?</ChatButton>
+							<ChatButton onClick={askBackground}>Tell me your background?</ChatButton>
 							<ChatButton onClick={askCollaboration}>Can we make collaboration?</ChatButton>
 						</div>
 					) : null;
@@ -61,9 +61,9 @@ export default function WelcomeChat(){
 			</div>
 
 			{
-				isOpenAddress && (
+				isOpenBackground && (
 					<>
-						<AddressChat></AddressChat>
+						<AskBackground></AskBackground>
 					</>
 				)
 			}

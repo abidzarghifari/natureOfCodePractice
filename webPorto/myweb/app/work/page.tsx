@@ -23,7 +23,7 @@ export default function Page(){
                         my story
                     </div>
                     <div className="flex-1 lg:flex-3 text-base">
-                        Explore my journey and learn what sets us apart in <span className="text-muted-foreground">crafting impactful digital experiences.</span>
+                       I’ve mapped out my journey, my philosophy, and the ideas that drive me.<span className="text-muted-foreground"> I'd love to share them with you.</span>
                     </div>
                     <div className="flex-1 flex items-start lg:justify-end">
                         <AboutButton></AboutButton>

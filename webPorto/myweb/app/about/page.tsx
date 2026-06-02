@@ -82,7 +82,7 @@ export default function Page(){
                 
 
                 <div className="grid grid-cols-1 gap-5 justify-items-center">
-                    <p className="text-base text-muted-foreground text-justify max-w-2xl">However, the best projects are never born in a vacuum. Technology advances too rapidly to be explored in isolation. There are always boundaries that can be broken when two—or more—heads come together, share wild ideas, and combine diverse skills. So I invite you to collaborate and let you know how I build this art.</p>
+                    <p className="text-base text-muted-foreground text-justify max-w-2xl">as far as the journey goes, I discovered the art of perspective. It trained my mind to hold two truths at once: the beauty of the grand design, and the precision of the single thread. Because true problem-solving isn't just about finding an answer—it's about knowing how to gracefully zoom from the horizon to the grain of sand.</p>
                 </div>
 
                 {//showcase
