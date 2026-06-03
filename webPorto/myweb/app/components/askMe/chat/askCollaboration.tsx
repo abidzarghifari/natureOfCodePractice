@@ -1,9 +1,13 @@
+"use client"
+
+import { useState } from "react";
 import QuestionChat from "./component/questionChatBubble"
 import FirstChat from "./component/firstChatBubble"
 import { useSequentialRender } from "../../tools/sequentialRender";
 import TimeStamp from "./component/timeStamp";
 import ChatBubble from "./component/chatBubble";
 import ChatType from "./component/chatType";
+import ChatButton from "./component/chatButton";
 
 const chatQueue: ChatType[] = [
     { type: 'question-chat', text: 'Can we make collaboration?' },
@@ -11,10 +15,12 @@ const chatQueue: ChatType[] = [
 	{ type: 'first-chat', text: "thats great broww" },
 	{ type: 'bubble', text: "Send me a message and lets chat further!" },
 	{ type: 'answer-time'},
+	{ type: 'action-buttons' }
 ];
 
 export default function AskCollaboration(){
-	
+
+	const [isOpenButton, setIsOpenButton] = useState(true);
 	
 	const visibleMessages = useSequentialRender(chatQueue,800);
 	
@@ -49,6 +55,16 @@ export default function AskCollaboration(){
 							return <div key={index} className="self-start">
 										<TimeStamp ></TimeStamp>
 									</div>;
+						}
+
+						if (item.type === 'action-buttons') {
+							// Fungsi state dipanggil dengan aman di sini saat mapping UI
+							return isOpenButton ? (
+								<div key={index} className="flex flex-col gap-2 animate-in fade-in duration-300">
+									<ChatButton >Send Message</ChatButton>
+									<ChatButton >ask something else</ChatButton>
+								</div>
+							) : null;
 						}
 				})}
 
