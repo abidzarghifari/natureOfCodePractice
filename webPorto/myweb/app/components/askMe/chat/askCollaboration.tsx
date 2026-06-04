@@ -8,6 +8,8 @@ import TimeStamp from "./component/timeStamp";
 import ChatBubble from "./component/chatBubble";
 import ChatType from "./component/chatType";
 import ChatButton from "./component/chatButton";
+import AskBackground from "./askBackground";
+import SayHi from "./sayHi";
 
 const chatQueue: ChatType[] = [
     { type: 'question-chat', text: 'Can we make collaboration?' },
@@ -21,7 +23,18 @@ const chatQueue: ChatType[] = [
 export default function AskCollaboration(){
 
 	const [isOpenButton, setIsOpenButton] = useState(true);
-	
+	const [isOpenButton2, setIsOpenButton2] = useState(true);
+	const [isOpenAskSomething, setIsOpenAskSomething] = useState(false);
+	const [isOpenBackground, setIsOpenBackground] = useState(false);
+	const [isOpenSayHi, setIsOpenSayHi] = useState(false);
+
+	const askSomething = () => {setIsOpenAskSomething(true); setIsOpenButton(false)};
+	const askBackground = () => {setIsOpenBackground(true); setIsOpenButton2(false)}; 	 
+	const askSayHi = () => {setIsOpenSayHi(true); setIsOpenButton2(false)};
+
+
+
+
 	const visibleMessages = useSequentialRender(chatQueue,800);
 	
 	return (
@@ -62,13 +75,38 @@ export default function AskCollaboration(){
 							return isOpenButton ? (
 								<div key={index} className="flex flex-col gap-2 animate-in fade-in duration-300">
 									<ChatButton >Send Message</ChatButton>
-									<ChatButton >ask something else</ChatButton>
+									<ChatButton onClick={askSomething}>ask something else</ChatButton>
 								</div>
 							) : null;
 						}
 				})}
 
+				{
+				isOpenAskSomething && isOpenButton2 && (
+						<>
+							<ChatButton onClick={askBackground}>Tell me your background?</ChatButton>
+							<ChatButton onClick={askSayHi}>Just say Hi</ChatButton>
+						</>
+					)
+				}
+
 			</div>
+
+			{
+				isOpenBackground && (
+					<>
+						<AskBackground></AskBackground>
+					</>
+				)
+			}
+			{
+				isOpenSayHi && (
+					<>
+						<SayHi></SayHi>
+					</>
+				)
+			}
+
 		</>
-	)
+	);
 }
