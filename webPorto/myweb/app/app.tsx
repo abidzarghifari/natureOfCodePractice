@@ -29,7 +29,7 @@ export default function App({
   
   return (
     <div>
-        <div className="p-5 md:px-20 md:py-10 bg-background">
+        <div className="p-5 md:px-20 md:py-10 bg-background relative z-10">
                       
             <div className="">
               
@@ -37,7 +37,7 @@ export default function App({
                     <Navbar></Navbar>
                 </div>
                         
-                <div className=''>
+                <div className="">
                     {children}
                 </div>
                         

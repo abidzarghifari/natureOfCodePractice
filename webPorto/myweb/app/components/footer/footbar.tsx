@@ -1,13 +1,20 @@
+"use client"
+
+import { useState } from "react";
 import Navitem from "../navigation/navItem";
+import AskMe from "../askMe/askMe";
+import NavitemButton from "../navigation/navitembutton";
 
 export default function Footbar(){
 
+    const [isOpenDialog, setIsOpenDialog] = useState(false);
+
     return (
-        <div className="">
+        <>
             <div className="h-90 pointer-events-none">
 
             </div>
-            <div className="box-border fixed -z-10 pointer-events-auto inset-x-0 bottom-0 px-5 md:px-15">
+            <div className="box-border fixed z-0 pointer-events-auto inset-x-0 bottom-0 px-5 md:px-15">
  
                 <div className="grid grid-cols-1 md:grid-cols-2 pt-10 md:pt-20 md:gap-20">
                     
@@ -22,7 +29,7 @@ export default function Footbar(){
                         <div className="flex flex-col gap-5 mt-4 md:mt-0 text-base">
                              <Navitem href="/work">Work</Navitem>
                              <Navitem href="/about">About</Navitem>
-                             <Navitem href="/">AskMe</Navitem>   
+                             <NavitemButton toggle={ () =>setIsOpenDialog((prev)=>!prev)}>AskMe</NavitemButton>
                         </div>
 
                         <div className="flex flex-col gap-5 space-x-6 mt-4 md:mt-0">
@@ -52,8 +59,10 @@ export default function Footbar(){
                 <div className="md:hidden py-5">
                     <p className="text-muted-foreground text-sm">2026 developed with passion by Dikayoda</p>                   
                 </div>
-                
             </div>
-        </div>  
+            <div>
+                <AskMe toggled={isOpenDialog} toggle={() =>setIsOpenDialog(false)}></AskMe>
+            </div>
+        </>  
     );
 }
